@@ -1,0 +1,51 @@
+<mvc:View controllerName="OdataService.controller.View1" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Northwind OData Service">
+				<content>
+					<Panel headerText="Employee Form" expandable="true">
+						<f:SimpleForm editable="true">
+							<Label text="First Name"></Label>
+							<Input id="fname" width="17rem"/>
+							<Label text="Last Name"></Label>
+							<Input id="lname" width="17rem"/>
+							<Label text="Birth Date"></Label>
+							<DatePicker id="date" width="17rem"/>
+							<Label text="City"></Label>
+							<Input id="city" width="17rem"/>
+							<Label></Label>
+							<Button width="17rem" text="Submit" press="onPress"/>
+						</f:SimpleForm>
+					</Panel>
+					<Table id="idTable" items="{/Employees}">
+						<columns>
+							<Column>
+								<Label text="First Name"></Label>
+							</Column>
+							<Column>
+								<Label text="Last Name"></Label>
+							</Column>
+							<Column>
+								<Label text="Birth Date"></Label>
+							</Column>
+							<Column>
+								<Label text="City"></Label>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{FirstName}"></Text>
+									<Text text="{LastName}"></Text>
+									<Text text="{BirthDate}"></Text>
+									<Text text="{City}"></Text>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
